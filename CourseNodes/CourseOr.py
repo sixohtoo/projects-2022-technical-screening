@@ -1,5 +1,9 @@
 import CourseNodes
 
+"""
+    Binary boolean composite node that evaluates its left and right children with an 'or'
+"""
+
 
 class CourseOr(CourseNodes.CourseBinary.CourseBinary):
     def __init__(self, left, right) -> None:

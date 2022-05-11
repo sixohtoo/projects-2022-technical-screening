@@ -44,15 +44,20 @@ def is_unlocked(courses_list, target_course):
     }
     """
 
+    # Condition needed to unlock the target course
     target_condition = CONDITIONS[target_course]
+
+    # If there's no condition, course is automatically unlocked
     if not target_condition:
         return True
 
+    # Seperate target condition into an array of composite object prompts
     condition_arr = seperate_blocks(target_condition)
-    # print("a:", condition_arr)
+
+    # Transform condition array into composite pattern tree
     target = generate_course(condition_arr)
 
-    # print("hb:", courses_list)
+    # Evaluate composite pattern tree
     return target.evaluate(courses_list)
 
 

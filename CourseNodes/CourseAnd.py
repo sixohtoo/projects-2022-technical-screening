@@ -1,10 +1,12 @@
 import CourseNodes
 
+"""
+    Binary boolean composite node that evaluates its left and right children with an 'and'
+"""
+
 
 class CourseAnd(CourseNodes.CourseBinary.CourseBinary):
     def __init__(self, left, right) -> None:
-        # print("and left:", left)
-        # print("and right:", right)
         super().__init__(left, right)
 
     def evaluate(self, course_list):
